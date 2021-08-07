@@ -1,6 +1,6 @@
 @import '__variables.scss';
 @import '__global.scss';
-
+@import '__query.scss';
 body {
     background-color: $lightGrayishCyan1 ;
     text-align: left;
@@ -49,18 +49,16 @@ header {
     }
 }
 
-.dollar::before {
+.dollar::before { 
     // content: url("/images/icon-dollar.svg");
-    // content: url("https://pakdhe887.github.io/TipCalculator/images/icon-dollar.svg");
-    content: url("../images/icon-dollar.svg");
+    content: url("https://github.com/NoFall887/TipCalculator/blob/f45bde9ca4018ff0b480d060e47869996c68b947/images/icon-dollar.svg");
     position: absolute;
     line-height: 3.4rem;
 }
 
 .person::before {
     // content: url("/images/icon-person.svg");
-    // content: url("https://pakdhe887.github.io/TipCalculator/images/icon-person.svg");
-    content: url("../images/icon-person.svg");
+    content: url("https://github.com/NoFall887/TipCalculator/blob/f45bde9ca4018ff0b480d060e47869996c68b947/images/icon-person.svg");
     position: absolute;
     line-height: 3.4rem;
 }
@@ -120,10 +118,7 @@ header {
         font-weight: bold;
         cursor: pointer;
     }
-    button:hover {
-        background-color: $resetActiveHover;
-        color: $veryDarkCyan;
-    }
+
     button:active {
         background-color: $strongCyan;
         color: $veryDarkCyan;
@@ -232,4 +227,3 @@ header {
     float: right;
 }
 
-@import '__query.scss';

@@ -76,4 +76,12 @@
     }
 }
 
+@media (hover: hover) and (pointer: fine) {
+    .grid {
+        button:hover {
+            background-color: $resetActiveHover;
+            color: $veryDarkCyan;
+        }    
+    }
+}
 
