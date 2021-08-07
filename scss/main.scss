@@ -1,5 +1,5 @@
-@import 'variables.scss';
-@import 'global.scss';
+@import '__variables.scss';
+@import '__global.scss';
 
 body {
     background-color: $lightGrayishCyan1 ;
@@ -50,13 +50,13 @@ header {
 }
 
 .dollar::before {
-    content: url(/images/icon-dollar.svg);
+    content: url("/images/icon-dollar.svg");
     position: absolute;
     line-height: 3.4rem;
 }
 
 .person::before {
-    content: url(/images/icon-person.svg);
+    content: url("/images/icon-person.svg");
     position: absolute;
     line-height: 3.4rem;
 }
@@ -228,4 +228,4 @@ header {
     float: right;
 }
 
-@import 'query.scss';
+@import '__query.scss';
