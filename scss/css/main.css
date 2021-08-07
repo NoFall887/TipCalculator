@@ -141,13 +141,13 @@ header {
 }
 
 .dollar::before {
-  content: url("https://github.com/NoFall887/TipCalculator/blob/f45bde9ca4018ff0b480d060e47869996c68b947/images/icon-dollar.svg");
+  content: url("../../images/icon-dollar.svg");
   position: absolute;
   line-height: 3.4rem;
 }
 
 .person::before {
-  content: url("https://github.com/NoFall887/TipCalculator/blob/f45bde9ca4018ff0b480d060e47869996c68b947/images/icon-person.svg");
+  content: url("../../images/icon-person.svg");
   position: absolute;
   line-height: 3.4rem;
 }
