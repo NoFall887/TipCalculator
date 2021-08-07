@@ -1,0 +1,231 @@
+@import 'variables.scss';
+@import 'global.scss';
+
+body {
+    background-color: $lightGrayishCyan1 ;
+    text-align: left;
+}
+.logo {
+    margin: 10.125rem 0 5.5rem 0;
+}
+
+header {
+    text-align: center;
+}
+#section {
+    &-bill, &-tip {
+        margin-bottom: 2.875rem;
+    }
+}
+
+.input {
+    display: block;
+    text-align: right;
+    height: 3rem;
+    font-size: $large;
+    font-family: $primaryFont;
+    font-weight: bold;
+    border-radius: 0.5rem;
+    border: solid $lightGrayishCyan2 2px;
+    background-color: $lightGrayishCyan2;
+    cursor: pointer;
+    outline-style: none;
+    color: $veryDarkCyan;
+    transition: 500ms;
+    padding-right: 0.75rem;
+    &-main {
+        width: 100%;
+        padding-left: 3rem;
+    }
+    &-mini {
+        width: 7.375rem;
+    }
+    &-icon-cont {
+        position: absolute;
+        text-align: center;
+        width: 2rem;
+        height: 3rem;
+        pointer-events: none;
+    }
+}
+
+.dollar::before {
+    content: url(/images/icon-dollar.svg);
+    position: absolute;
+    line-height: 3.4rem;
+}
+
+.person::before {
+    content: url(/images/icon-person.svg);
+    position: absolute;
+    line-height: 3.4rem;
+}
+
+.input:focus {
+    border-radius: 0.3125rem;
+    border: solid $strongCyan 2px;
+}
+
+.flex {
+    display: flex;
+    background-color: $white;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    border-radius: 1.5rem;
+    max-width: 57.5rem;
+    padding: 2rem 2rem 2rem 2rem;
+    height: auto;
+
+    .calc {
+        flex: 1;
+        margin-right: 1.5rem;
+        padding-bottom: 1rem;
+        padding-left: 1rem;
+        padding-top: 1.1875rem;
+    }
+    
+    .result {
+        background-color: $veryDarkCyan;
+        flex: 1;
+        margin-left: 1.5rem;
+        border-radius: 0.875rem;
+        padding: 3.75rem 2.5rem 2.5rem 2.5rem;
+        box-sizing: border-box;
+    }
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    max-width: 100%;
+    row-gap: 1rem;
+    grid-row-gap: 1rem;
+    column-gap: 0.875rem;
+    button {
+        width: 7.375rem;
+        height: 3rem;
+        font-family: $primaryFont;
+        background-color: $veryDarkCyan;
+        color: $white;
+        border: none;
+        border-radius: 0.25rem;
+        font-size: $large;
+        font-weight: bold;
+        cursor: pointer;
+    }
+    button:hover {
+        background-color: $resetActiveHover;
+        color: $veryDarkCyan;
+    }
+    button:active {
+        background-color: $strongCyan;
+        color: $veryDarkCyan;
+    }
+    .button-active {
+        background-color: $strongCyan;
+        color: $veryDarkCyan;
+        &:hover {
+            background-color: $strongCyan;
+        }
+    }
+}
+.calc-title {
+    font-size: 1rem;
+    margin: 0;
+    font-weight: 600;
+    color: $darkGrayishCyan1;
+    margin-bottom: 0.75rem;
+    display: inline-block;
+}
+
+.result-section {
+    display: flex;
+    justify-content: space-between;
+    max-width: 100%;
+    align-items: center;
+    flex-wrap: wrap;
+    &:nth-child(1) {
+        margin-bottom: 2rem ;
+    }
+    &:nth-child(2) {
+        margin-bottom: 7.5rem;
+    }
+}
+
+.result-res {
+    font-size: $xlarge;
+    margin: 0;
+    font-weight: 800;
+    color: $strongCyan;
+}
+
+.result-title {
+    font-weight: 600;
+    display: inline-block;
+    & p:nth-child(1){
+        margin-top: 0;
+        margin-bottom: 0.2rem;
+        color: $white;
+    }
+    & p:nth-child(2) {
+        margin: 0;
+        color: $darkGrayishCyan1;
+    }
+}
+
+.reset {
+    border: none;
+    width: 100%;
+    color: $veryDarkCyan;
+    font-family: $primaryFont;
+    font-weight: 600;
+    font-size: $medium;
+    border-radius: 0.3125rem;
+    padding: 0.75rem;
+    &-inactive {
+        background-color: $resetInactive;
+    }
+    &-active {
+        background-color: $strongCyan;
+        cursor: pointer;
+    }
+    &-active {
+        &:hover {
+            background-color: $resetActiveHover;
+        }
+        &:active {
+            background-color: $strongCyan;
+        }
+    }
+}
+
+
+.attribution {
+    font-size: 1rem;
+    text-align: center;
+    margin-bottom: 1rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    a {
+        color: hsl(228, 45%, 44%);
+    }
+}
+
+.red-alert {
+    border-color: red;
+    &:focus {
+        border-color: red;
+    }
+}
+
+.warning-text::before {
+    content: "Can't be zero";
+    font-weight: 600;
+    color: red;
+    float: right;
+}
+
+@import 'query.scss';
