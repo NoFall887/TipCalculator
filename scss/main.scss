@@ -1,6 +1,6 @@
 @import '__variables.scss';
 @import '__global.scss';
-@import '__query.scss';
+
 body {
     background-color: $lightGrayishCyan1 ;
     text-align: left;
@@ -33,12 +33,14 @@ header {
     color: $veryDarkCyan;
     transition: 500ms;
     padding-right: 0.5rem;
+    
     &-main {
         width: 100%;
         padding-left: 3rem;
     }
     &-mini {
-        width: 7.375rem;
+        width: 100%;
+        padding-right: auto;
     }
     &-icon-cont {
         position: absolute;
@@ -227,3 +229,4 @@ header {
     float: right;
 }
 
+@import '__query.scss';
