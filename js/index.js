@@ -8,6 +8,7 @@ const sectionBill = document.getElementById("section-bill")
 const sectionPerson = document.getElementById("section-person")
 const tipRes = document.getElementById("tip-res")
 const totalRes = document.getElementById("total-res")
+const inputs = [billInput, personInput, customInput]
 var activeBtn = null
 
 var billValue = ''
@@ -51,6 +52,7 @@ function getTipValue() {
         deactivateBtn(activeBtn)
         activateBtn(this)
     }
+    customInput.classList.remove("red-alert")
     if (tipValue !== '') {
         startCount()
     }
@@ -65,12 +67,14 @@ customInput.addEventListener("input", function(){
     if (tipValue === 0){
         customInput.classList.add("red-alert")
         hide()
-    } else{
-        if (customInput.classList.contains("red-alert")) {
-            customInput.classList.remove("red-alert")
-        }
+    } else if (tipValue < 0) {
+        customInput.classList.add("red-alert")
+        hide()
+    }else {
+        customInput.classList.remove("red-alert")
         startCount()
     }
+    
 })
 
 for (let i of buttons) {
@@ -84,11 +88,12 @@ billInput.addEventListener("input", function (){
         billInput.classList.add("red-alert")
         sectionBill.classList.add("warning-text")
         hide()
+    } else if (billValue < 0) {
+        billInput.classList.add("red-alert")
+        hide()
     } else {
-        if (billInput.classList.contains("red-alert")) {
-            billInput.classList.remove("red-alert")
-            sectionBill.classList.remove("warning-text")
-        }
+        billInput.classList.remove("red-alert")
+        sectionBill.classList.remove("warning-text")
         startCount()
     }
 })
@@ -100,11 +105,12 @@ personInput.addEventListener("input", function () {
         personInput.classList.add("red-alert")
         sectionPerson.classList.add("warning-text")
         hide()
+    } else if (personValue < 0){
+        personInput.classList.add("red-alert")
+        hide()
     } else {
-        if (personInput.classList.contains("red-alert")) {
-            personInput.classList.remove("red-alert")
-            sectionPerson.classList.remove("warning-text")
-        }
+        personInput.classList.remove("red-alert")
+        sectionPerson.classList.remove("warning-text")
         startCount()
     }
 })
@@ -158,7 +164,7 @@ function resetInactive() {
 }
 
 function startCount() {
-    if (!(tipValue === '' || billValue === '' || personValue === '')){
+    if (!(tipValue <= 0 || billValue <= 0 || personValue <= 0)){
         count()
         show()
         resetActive()

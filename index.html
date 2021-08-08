@@ -43,12 +43,13 @@
           <button type="button" value="15">15%</button>
           <button type="button" value="25">25%</button>
           <button type="button" value="50">50%</button>
-          <input name="select-tip" class="input input-mini" type="number" placeholder="Custom" min="0" max="100">
+          <label for="custom-input" style="display: none;">Custom tip</label>
+          <input id="custom-input" name="select-tip" class="input input-mini" type="number" placeholder="Custom" min="0" max="100">
         </div>
       </div>
 
       <div id="section-person">
-        <label class="calc-title">Number of People</label>
+        <label class="calc-title" for="person">Number of People</label>
         <div>
           <div class="input-icon-cont person"></div>
           <input name="Number of People" id="person" class="input input-main" type="number" placeholder="0" min="0">
